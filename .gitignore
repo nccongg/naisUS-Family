@@ -39,11 +39,15 @@ next-env.d.ts
 /prisma/migrations
 
 # images (keep structure but ignore actual image files)
+# But allow essential images needed for deployment
 /public/images/**/*.jpg
 /public/images/**/*.jpeg
 /public/images/**/*.png
 /public/images/**/*.gif
 /public/images/**/*.webp
 /public/images/**/*.svg
+# Allow essential images
+!public/images/banner.jpg
+!public/images/logo.png
 !public/images/**/.gitkeep
 !public/images/**/README.md

@@ -18,6 +18,9 @@ export const metadata: Metadata = {
   title: "NaisUS Family - Effort 110%, Chaos 200%",
   description: "Một gia đình tech nhưng gà :)))) We Are NaisUS Family — Effort 110%, Chaos 200%.",
   keywords: ["NaisUS", "Family", "Tech", "Blog", "Vietnamese"],
+  icons: {
+    icon: "/favicon.ico",
+  },
 }
 
 export default function RootLayout({
