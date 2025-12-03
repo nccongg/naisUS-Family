@@ -88,7 +88,7 @@ export function Footer() {
                 </Link>
               </li>
               <li className="text-xs text-muted-foreground italic">
-                "110% Effort Compliance" (meme)
+                &quot;110% Effort Compliance&quot; (meme)
               </li>
             </ul>
           </div>
@@ -112,7 +112,7 @@ export function Footer() {
                 </Link>
               </li>
               <li className="text-xs text-muted-foreground italic">
-                "Report bugs — chúng tôi sẽ sửa… sớm thôi."
+                &quot;Report bugs — chúng tôi sẽ sửa… sớm thôi.&quot;
               </li>
             </ul>
           </div>
