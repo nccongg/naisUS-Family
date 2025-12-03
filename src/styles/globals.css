@@ -1,0 +1,135 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Dark theme colors inspired by portfolio */
+    /* Background: #1c1c22 -> hsl(240, 9%, 13%) */
+    --background: 240 9% 13%;
+    /* Foreground: white */
+    --foreground: 0 0% 100%;
+    /* Card: #27272c -> hsl(240, 6%, 16%) */
+    --card: 240 6% 16%;
+    --card-foreground: 0 0% 100%;
+    --popover: 240 6% 16%;
+    --popover-foreground: 0 0% 100%;
+    /* Primary: #0ee27c -> hsl(150, 85%, 47%) */
+    --primary: 150 85% 47%;
+    --primary-foreground: 0 0% 0%;
+    /* Secondary: darker gray */
+    --secondary: 240 6% 20%;
+    --secondary-foreground: 0 0% 100%;
+    /* Muted: rgba(255, 255, 255, 0.6) -> hsl(0, 0%, 100% / 0.6) */
+    --muted: 240 6% 20%;
+    --muted-foreground: 0 0% 100% / 0.6;
+    --accent: 240 6% 20%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 100%;
+    /* Border: subtle dark border */
+    --border: 240 6% 25%;
+    --input: 240 6% 25%;
+    /* Ring: primary color */
+    --ring: 150 85% 47%;
+    --radius: 0.75rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Inter', 'Lexend', system-ui, -apple-system, sans-serif;
+  }
+  
+  /* Smooth scrolling */
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  /* Custom scrollbar for dark theme */
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    @apply bg-background;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    @apply bg-muted rounded-full;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-muted-foreground;
+  }
+}
+
+@layer utilities {
+  .prose {
+    @apply text-foreground;
+  }
+  .prose h1 {
+    @apply text-4xl font-bold mt-8 mb-4;
+  }
+  .prose h2 {
+    @apply text-3xl font-bold mt-6 mb-3;
+  }
+  .prose h3 {
+    @apply text-2xl font-semibold mt-4 mb-2;
+  }
+  .prose p {
+    @apply mb-4 leading-relaxed;
+  }
+  .prose ul, .prose ol {
+    @apply mb-4 ml-6;
+  }
+  .prose li {
+    @apply mb-2;
+  }
+  .prose code {
+    @apply bg-card px-1.5 py-0.5 rounded text-sm font-mono text-primary;
+  }
+  .prose pre {
+    @apply bg-card p-4 rounded-lg overflow-x-auto mb-4 border border-border;
+  }
+  .prose pre code {
+    @apply bg-transparent p-0 text-foreground;
+  }
+  .prose blockquote {
+    @apply border-l-4 border-primary pl-4 italic my-4 text-muted-foreground;
+  }
+  .prose a {
+    @apply text-primary hover:text-primary/80 hover:underline transition-colors;
+  }
+  .prose strong {
+    @apply font-bold;
+  }
+  .prose em {
+    @apply italic;
+  }
+  
+  /* Glow effects for primary color */
+  .glow-primary {
+    box-shadow: 0 0 20px hsl(var(--primary) / 0.3);
+  }
+  
+  .glow-primary-sm {
+    box-shadow: 0 0 10px hsl(var(--primary) / 0.2);
+  }
+  
+  /* Text glow */
+  .text-glow {
+    text-shadow: 0 0 10px hsl(var(--primary) / 0.5);
+  }
+  
+  /* Hover glow effect */
+  .hover-glow:hover {
+    box-shadow: 0 0 20px hsl(var(--primary) / 0.4);
+    transition: box-shadow 0.3s ease;
+  }
+}
+
