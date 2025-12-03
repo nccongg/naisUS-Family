@@ -49,5 +49,6 @@ next-env.d.ts
 # Allow essential images
 !public/images/banner.jpg
 !public/images/logo.png
+!public/images/members/meme-rong-3-dau.jpg
 !public/images/**/.gitkeep
 !public/images/**/README.md

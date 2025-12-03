@@ -3,7 +3,10 @@
 ## Các vấn đề đã được sửa:
 
 ### ✅ 1. Sửa .gitignore để commit các file ảnh cần thiết
-- Đã thêm exception cho `banner.jpg` và `logo.png` trong `.gitignore`
+- Đã thêm exception cho các file ảnh cần thiết trong `.gitignore`:
+  - `banner.jpg` - Banner chính của website
+  - `logo.png` - Logo của NaisUS Family
+  - `members/meme-rong-3-dau.jpg` - Ảnh member được sử dụng trong code
 - Các file này sẽ được commit và deploy lên Vercel
 
 ### ✅ 2. Tạo các trang Policy còn thiếu
@@ -23,9 +26,10 @@
 # Kiểm tra xem các file ảnh có được track không
 git status
 
-# Nếu banner.jpg và logo.png chưa được track, thêm chúng:
+# Thêm tất cả các file ảnh cần thiết:
 git add public/images/banner.jpg
 git add public/images/logo.png
+git add public/images/members/meme-rong-3-dau.jpg
 git commit -m "Add essential images for deployment"
 git push
 ```
@@ -43,9 +47,10 @@ Sau khi commit các file ảnh, Vercel sẽ tự động deploy lại và các l
 
 1. ✅ `/images/banner.jpg` - Không còn lỗi 404
 2. ✅ `/images/logo.png` - Không còn lỗi 404
-3. ✅ `/privacy` - Trang hiển thị đúng
-4. ✅ `/terms` - Trang hiển thị đúng
-5. ✅ `/cookies` - Trang hiển thị đúng
-6. ✅ `/guidelines` - Trang hiển thị đúng
-7. ⚠️ `/favicon.ico` - Cần thêm file (không bắt buộc)
+3. ✅ `/images/members/meme-rong-3-dau.jpg` - Không còn lỗi 404
+4. ✅ `/privacy` - Trang hiển thị đúng
+5. ✅ `/terms` - Trang hiển thị đúng
+6. ✅ `/cookies` - Trang hiển thị đúng
+7. ✅ `/guidelines` - Trang hiển thị đúng
+8. ⚠️ `/favicon.ico` - Cần thêm file (không bắt buộc)
 
